@@ -13,7 +13,6 @@ locals {
   private_security_group_id            = lookup(var.provider_settings, "private_security_group_id", null)
   private_additional_security_group_id = lookup(var.provider_settings, "private_additional_security_group_id", null)
   bastion_host                         = lookup(var.provider_settings, "bastion_host", null)
-  
   public_key_location = lookup(var.provider_settings, "public_key_location", null)
   key_file = lookup(var.provider_settings, "key_file", null)
 }
@@ -97,10 +96,9 @@ locals {
   image                         = "opensuse152"
   name                          = "bastion"
   connect_to_additional_network = true
-  public_instance = true 
   provider_settings = {
     vm_size = "Standard_B1s"
-    public_instance = true 
+    public_instance = true
   }
 }
 
