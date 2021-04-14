@@ -116,7 +116,7 @@ resource "azurerm_network_security_rule" "https" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "443"
-  source_address_prefix       = "*"
+  source_address_prefix       = var.ssh_allowed_ips
   destination_address_prefix  = "*"
 }
 

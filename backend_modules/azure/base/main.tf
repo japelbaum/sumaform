@@ -67,8 +67,7 @@ locals {
     additional_network = local.additional_network
 
     location            = local.location
-    #availability_zone = local.availability_zone
-
+    
     public_key_location = local.public_key_location
     key_file = local.key_file
     resource_group_name = module.network.configuration.resource_group_name
